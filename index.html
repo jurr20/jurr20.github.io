@@ -8,201 +8,206 @@
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/owl.carousel.js"></script>
 		<script type="text/javascript" src="js/modernizr.custom 3D link-hover.js"></script>
+
+		<script type="text/javascript" src="js/dictionary.js"></script>
+		<script type="text/javascript" src="js/template.js"></script>
 		</head>
 	</head>
 	<body>
-		<div class="go-in js-go-in">
-			<img src="images/upload.png" height="256" width="256" alt="">
-		</div>
-		<div class="go-up js-go-up">
-			<img src="images/upload.png" height="256" width="256" alt="">
-		</div>
-		<header>
-			<div class="container">
-				<div class="block-main-menu">
-					<div id="menu" class="main-menu">
-						<li><a href="#about-me">Обо мне</a></li>
-						<li><a href="#portfolio">Портфолио</a></li>
-						<li><a href="#skills">Навыки</a></li>
-						<li><a href="#contacts">Контакты</a></li>
-					</div>
-					<button type="button" class="mobile-btn">
-						<span class="icons">
-							<span class="ico_bar"></span>
-							<span class="ico_bar"></span>
-							<span class="ico_bar"></span>
-						</span>
-					</button>
-				</div>
-				<div class="main-title">Front-End developer</div>
-				<div class="main-sub-title">Дудка Дарья</div>
+		<script type="text/template" id="main">
+			<div class="go-in js-go-in">
+				<img src="images/upload.png" height="256" width="256" alt="">
 			</div>
-		</header>
-
-				<!-- 		BEGIN ABOUT ME		-->
-
-		<div class="about-me" id="about-me">
-			<div class="container">
-				<div class="title">Обо мне</div>
-				<img src="images/about.png" height="21" width="252" alt="" class="line-icon">
-				<div class="description">
-					<p>Всем доброго времени суток. Несколько слов о себе:</p>
-					<p>"В 2014 году приступила к изучению верстки с помощью HTML Academy: интерактивные онлайн-курсы по HTML, CSS и JS.
-					C тех пор изучаю Front-End разработку как самостоятельно, так и с помощью индивидуальных занятий.
-					Имею небольшой опыт верстки landing page на базе Wordpress."</p>
-				</div>
+			<div class="go-up js-go-up">
+				<img src="images/upload.png" height="256" width="256" alt="">
 			</div>
-		</div>
+			<header>
+				<div class="container">
+					<div class="block-main-menu">
+						<div id="menu" class="main-menu">
+							<li><a href="#about-me"><%about_me%></a></li>
+							<li><a href="#portfolio">Портфолио</a></li>
+							<li><a href="#skills">Навыки</a></li>
+							<li><a href="#contacts">Контакты</a></li>
+						</div>
+						<button type="button" class="mobile-btn">
+							<span class="icons">
+								<span class="ico_bar"></span>
+								<span class="ico_bar"></span>
+								<span class="ico_bar"></span>
+							</span>
+						</button>
+					</div>
+					<div class="main-title">Front-End developer</div>
+					<div class="main-sub-title">Дудка Дарья</div>
+				</div>
+				<button id="en">EN</button>
+				<button id="ru">RU</button>
 
-				<!-- 		END ABOUT ME		-->
+			</header>
 
-				<!-- 		BEGIN PORTFOLIO		-->
+					<!-- 		BEGIN ABOUT ME		-->
 
-		<div class="portfolio" id="portfolio">
-			<div class="container">
-				<div class="title">Портфолио</div>
-				<img src="images/work.png" height="21" width="252" alt="" class="line-icon">
-				<div class="portfolio_example">
-					<a href=""><img src="images/portfolio/balet1.png" height="400" width="auto" alt=""></a>
-					<div class="portfolio_description">
-						<li>Wordpress</li>
-						<li>Резиновая верстка</li>
-						<li>Кроссбраузерная верстка</li>
-						<li>Дизайн</li>
-						<li>Поиск информации</li>
-						<div class="link-cover">
-							<a class="btn hover-effect-3d" href="#" title="По желанию">
-								<span data-hover="Просмотреть">Просмотреть</span>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="portfolio_example">
-					<a href=""><img src="images/portfolio/balet2.png" height="400" width="auto" alt=""></a>
-					<div class="portfolio_description">
-						<li>Wordpress</li>
-						<li>Резиновая верстка</li>
-						<li>Кроссбраузерная верстка</li>
-						<li>Дизайн</li>
-						<li>Поиск информации</li>
-						<div class="link-cover">
-							<a class="btn hover-effect-3d" href="#" title="По желанию">
-								<span data-hover="Просмотреть">Просмотреть</span>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="portfolio_example">
-					<a href=""><img src="images/portfolio/balet3.png" alt=""></a>
-					<div class="portfolio_description">
-						<li>Wordpress</li>
-						<li>Резиновая верстка</li>
-						<li>Кроссбраузерная верстка</li>
-						<li>Дизайн</li>
-						<li>Поиск информации</li>
-						<div class="link-cover">
-							<a class="btn hover-effect-3d" href="#" title="По желанию">
-								<span data-hover="Просмотреть">Просмотреть</span>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="portfolio_example">
-					<a href=""><img src="images/portfolio/balet3.png" alt=""></a>
-					<div class="portfolio_description">
-						<li>Wordpress</li>
-						<li>Резиновая верстка</li>
-						<li>Кроссбраузерная верстка</li>
-						<li>Дизайн</li>
-						<li>Поиск информации</li>
-						<div class="link-cover">
-							<a class="btn hover-effect-3d" href="#" title="По желанию">
-								<span data-hover="Просмотреть">Просмотреть</span>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="portfolio_example">
-					<a href=""><img src="images/portfolio/balet5.png" alt=""></a>
-					<div class="portfolio_description">
-						<li>Wordpress</li>
-						<li>Резиновая верстка</li>
-						<li>Кроссбраузерная верстка</li>
-						<li>Дизайн</li>
-						<li>Поиск информации</li>
-						<div class="link-cover">
-							<a class="btn hover-effect-3d" href="#" title="По желанию">
-								<span data-hover="Просмотреть">Просмотреть</span>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="portfolio_example">
-					<img src="images/portfolio/balet6.png" alt="">
-					<div class="portfolio_description">
-						<li>Wordpress</li>
-						<li>Резиновая верстка</li>
-						<li>Кроссбраузерная верстка</li>
-						<li>Дизайн</li>
-						<li>Поиск информации</li>
-						<div class="link-cover">
-							<a class="btn hover-effect-3d" href="#" title="По желанию">
-								<span data-hover="Просмотреть">Просмотреть</span>
-							</a>
-						</div>
+			<div class="about-me" id="about-me">
+				<div class="container">
+					<div class="title">Обо мне</div>
+					<img src="images/about.png" height="21" width="252" alt="" class="line-icon">
+					<div class="description">
+						<%description_about_me%>
 					</div>
 				</div>
 			</div>
-		</div>
-				<!-- 		END PORTFOLIO		-->
 
-				<!-- 		BEGIN SKILLS		-->
+					<!-- 		END ABOUT ME		-->
 
-		<div class="skills" id="skills">
-			<div class="container">
-				<div class="title">Навыки</div>
-				<img src="images/about.png" height="21" width="252" alt="" class="line-icon">
-				<div class="skills_description">
-					Кроссбраузерная, адаптивная верстка
-					CSS3, HTML5
-					Java Script (готовые плагины)
-					SASS
-					GIT
-					Pixel Perfect 
-				</div>
-			</div>
-		</div>
+					<!-- 		BEGIN PORTFOLIO		-->
 
-				<!-- 		END SKILLS		-->
-
-				<!-- 		BEGIN CONTACTS 		-->
-
-		<div class="contacts" id="contacts">
-				<div class="title">Контакты</div>
-				<img src="images/contact.png" height="21" width="252" alt="" class="line-icon">
-				<div class="contacts_description">
-					<div class="contacts_info">
-						<p>г. Харьков</p>
-						<p>тел. (099) 77-98-520</p>
-						<p>E-mail: jurr20@gmail.com</p> 
+			<div class="portfolio" id="portfolio">
+				<div class="container">
+					<div class="title">Портфолио</div>
+					<img src="images/work.png" height="21" width="252" alt="" class="line-icon">
+					<div class="portfolio_example">
+						<a href=""><img src="images/portfolio/balet1.png" height="400" width="auto" alt=""></a>
+						<div class="portfolio_description">
+							<li>Wordpress</li>
+							<li>Резиновая верстка</li>
+							<li>Кроссбраузерная верстка</li>
+							<li>Дизайн</li>
+							<li>Поиск информации</li>
+							<div class="link-cover">
+								<a class="btn hover-effect-3d" href="#" title="По желанию">
+									<span data-hover="Просмотреть">Просмотреть</span>
+								</a>
+							</div>
+						</div>
 					</div>
-					<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48819.045927470455!2d36.253315166127315!3d49.97882720418427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a09f63ab0f8b%3A0x2d4c18681aa4be0a!2z0KXQsNGA0YzQutC-0LIsINCl0LDRgNGM0LrQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsINCj0LrRgNCw0LjQvdCw!5e0!3m2!1sru!2s!4v1478683241053" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<div class="portfolio_example">
+						<a href=""><img src="images/portfolio/balet2.png" height="400" width="auto" alt=""></a>
+						<div class="portfolio_description">
+							<li>Wordpress</li>
+							<li>Резиновая верстка</li>
+							<li>Кроссбраузерная верстка</li>
+							<li>Дизайн</li>
+							<li>Поиск информации</li>
+							<div class="link-cover">
+								<a class="btn hover-effect-3d" href="#" title="По желанию">
+									<span data-hover="Просмотреть">Просмотреть</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio_example">
+						<a href=""><img src="images/portfolio/balet3.png" alt=""></a>
+						<div class="portfolio_description">
+							<li>Wordpress</li>
+							<li>Резиновая верстка</li>
+							<li>Кроссбраузерная верстка</li>
+							<li>Дизайн</li>
+							<li>Поиск информации</li>
+							<div class="link-cover">
+								<a class="btn hover-effect-3d" href="#" title="По желанию">
+									<span data-hover="Просмотреть">Просмотреть</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio_example">
+						<a href=""><img src="images/portfolio/balet3.png" alt=""></a>
+						<div class="portfolio_description">
+							<li>Wordpress</li>
+							<li>Резиновая верстка</li>
+							<li>Кроссбраузерная верстка</li>
+							<li>Дизайн</li>
+							<li>Поиск информации</li>
+							<div class="link-cover">
+								<a class="btn hover-effect-3d" href="#" title="По желанию">
+									<span data-hover="Просмотреть">Просмотреть</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio_example">
+						<a href=""><img src="images/portfolio/balet5.png" alt=""></a>
+						<div class="portfolio_description">
+							<li>Wordpress</li>
+							<li>Резиновая верстка</li>
+							<li>Кроссбраузерная верстка</li>
+							<li>Дизайн</li>
+							<li>Поиск информации</li>
+							<div class="link-cover">
+								<a class="btn hover-effect-3d" href="#" title="По желанию">
+									<span data-hover="Просмотреть">Просмотреть</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio_example">
+						<img src="images/portfolio/balet6.png" alt="">
+						<div class="portfolio_description">
+							<li>Wordpress</li>
+							<li>Резиновая верстка</li>
+							<li>Кроссбраузерная верстка</li>
+							<li>Дизайн</li>
+							<li>Поиск информации</li>
+							<div class="link-cover">
+								<a class="btn hover-effect-3d" href="#" title="По желанию">
+									<span data-hover="Просмотреть">Просмотреть</span>
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
+					<!-- 		END PORTFOLIO		-->
 
-				<!-- 		END CONTACTS		-->
+					<!-- 		BEGIN SKILLS		-->
 
-
-				<div class="download">
-					<img src="images/down.png" height="21" width="252" alt="" class="line-icon">
-					<a href="CV_DUDKA DARIA.doc" download class="download">Скачать мое резюме</a>
+			<div class="skills" id="skills">
+				<div class="container">
+					<div class="title">Навыки</div>
+					<img src="images/about.png" height="21" width="252" alt="" class="line-icon">
+					<div class="skills_description">
+						Кроссбраузерная, адаптивная верстка
+						CSS3, HTML5
+						Java Script (готовые плагины)
+						SASS
+						GIT
+						Pixel Perfect 
+					</div>
 				</div>
-
-		<footer>
-			<div class="container">
-				<p>Lorem ipsum dolor sed a laboriosam quasi, esse!</p>
 			</div>
-		</footer>
+
+					<!-- 		END SKILLS		-->
+
+					<!-- 		BEGIN CONTACTS 		-->
+
+			<div class="contacts" id="contacts">
+					<div class="title">Контакты</div>
+					<img src="images/contact.png" height="21" width="252" alt="" class="line-icon">
+					<div class="contacts_description">
+						<div class="contacts_info">
+							<p>г. Харьков</p>
+							<p>тел. (099) 77-98-520</p>
+							<p>E-mail: jurr20@gmail.com</p> 
+						</div>
+						<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48819.045927470455!2d36.253315166127315!3d49.97882720418427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a09f63ab0f8b%3A0x2d4c18681aa4be0a!2z0KXQsNGA0YzQutC-0LIsINCl0LDRgNGM0LrQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsINCj0LrRgNCw0LjQvdCw!5e0!3m2!1sru!2s!4v1478683241053" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+
+					<!-- 		END CONTACTS		-->
+
+
+					<div class="download">
+						<img src="images/down.png" height="21" width="252" alt="" class="line-icon">
+						<a href="CV_DUDKA DARIA.doc" download class="download">Скачать мое резюме</a>
+					</div>
+
+			<footer>
+				<div class="container">
+					<p>Lorem ipsum dolor sed a laboriosam quasi, esse!</p>
+				</div>
+			</footer>
+		</script>
 	</body>
 </html>
