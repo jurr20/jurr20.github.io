@@ -1,3 +1,4 @@
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,7 +24,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-ol, ul, li {
+ol, ul {
 	list-style: none;
 }
 blockquote, q {
@@ -40,18 +41,20 @@ table {
 }
 * {
 	outline: none;
-	transition:1s;
+	box-sizing: border-box;
 }
 img {
 	display: block;
 	max-width: 100%;
 	height: auto;
 }
-a{
-	text-decoration: none;
-}
+
+
+
+
+
 body {
-	font: 15px/1.2 'Conv_inglobal';
+	font: 17px/1.2 'Conv_inglobal';
 }
 .container {
 	max-width: 1200px;
@@ -66,6 +69,10 @@ body {
 	text-align: center;
 	font-size: 25px;
 	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.line-icon{
+	margin: 0 auto 30px auto;
 }
 
 /*			BEGIN HEADER 			*/
@@ -74,8 +81,8 @@ header{
 	height: 100vh;
 	background: url(../images/keyboard.jpg) no-repeat;
 	filter: invert(168%) hue-rotate(90deg);
-	height: 100vh;
 	padding-top: 30px;
+	margin-bottom: 40px;
 }
 .main-menu{
 	margin-bottom: 50px;
@@ -87,6 +94,7 @@ header{
 }
 .main-menu a{
 	text-transform: uppercase;
+	text-decoration: none;
 	padding: 15px;
 	font-size: 16px;
 	transition: 5s;
@@ -104,13 +112,145 @@ header{
 	font-size: 35px;
 }
 
+
+.block-main-menu {
+	position: relative;
+}
+.block-main-menu:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.active-menu{
+	float: left;
+}
+.active-menu a{
+	display: inline-block;
+	text-align: center;
+	padding: 20px;
+	cursor: text;
+	color: #000;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+
+.mobile-btn {
+	border: 0;
+	width: 45px;
+	display: none;
+	position: relative;
+	float: right;
+	z-index: 10;
+	padding: 11px;
+	cursor: pointer;
+	background: #000000;
+	line-height: inherit;
+}
+.mobile-btn .icons {
+	cursor: pointer;
+	display: inline-block;
+	font-size: 10px;
+	height: 16px;
+	width: 20px;
+	position: relative;
+}
+.mobile-btn .ico_bar {
+	background: #ffffff;
+	height: 3px;
+	width: 100%;
+	position: absolute;
+	-webkit-transition: .1s ease-in-out;
+	-moz-transition: .1s ease-in-out;
+	-o-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+	left: 0;
+}
+.mobile-btn.active_btn .ico_bar {
+	background: #fff;
+}
+.mobile-btn .ico_bar:first-child {
+	top: 0;
+}
+.mobile-btn .ico_bar:nth-child(2) {
+	top: 8px;
+}
+.mobile-btn .ico_bar:nth-child(3) {
+	top: 16px;
+}
+
+.mobile-btn.active_btn .ico_bar:first-child {
+	-webkit-transform: rotate(45deg)translate(5px,9px);
+	-moz-transform: rotate(45deg)translate(5px,9px);
+	-ms-transform: rotate(45deg)translate(5px,9px);
+	-o-transform: rotate(45deg)translate(5px,9px);
+	transform: rotate(45deg)translate(5px,9px);
+}
+.mobile-btn.active_btn .ico_bar:nth-child(3) {
+	-webkit-transform: rotate(-45deg)translate(2px,-6px);
+	-moz-transform: rotate(-45deg)translate(2px,-6px);
+	-ms-transform: rotate(-45deg)translate(2px,-6px);
+	-o-transform: rotate(-45deg)translate(2px,-6px);
+	transform: rotate(-45deg)translate(2px,-6px);
+}
+.mobile-btn.active_btn .ico_bar:nth-child(2) {
+	opacity: 0;
+}
+
+/*media*/
+
+@media screen and (max-width: 640px) {
+	.active-menu a{
+		padding: 13px;
+	}
+	.mobile-btn {
+		display: block;
+	}
+	.block-main-menu .active{
+		display: block;
+	}
+	.main-menu{
+		display: none;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 100%;
+		z-index: 9999;
+		text-align: center;
+		padding: 5px 0;
+		margin: 0;
+		background: #333;
+	}
+	.main-menu.open {
+		display: block;
+	}
+	.main-menu li {
+		display: block;
+	}
+	.main-menu a{
+		padding: 13px;
+	}
+}
+@media screen and (max-width: 320px) {
+	.active-menu a, 
+	.main-menu a{
+		font-size: 12px;
+	}
+	.main-menu a{
+		padding: 10px;
+	}
+}
+
+
+
+
 /*			END HEADER 			*/
 
 /*			BEGIN ABOUT_ME 			*/
 
-.line-icon{
-	margin: 0 auto;
-}
+
 
 /*			END ABOUT_ME 			*/
 
@@ -124,21 +264,211 @@ header{
 	position: relative;
 	overflow: hidden;
 }
-.portfolio_description{
-	position: absolute;
-	top: 50%;
-	left: -100%;
-	width: 80%;
-	height: 80%;
-	background: rgba(0, 0, 0, 0.1);
-	transition: 1s;
+.portfolio_example{
+	position: relative;
 }
-.portfolio_example:hover .portfolio_description{
-	top: 5%;
-	left: 5%;
+.portfolio_example .portfolio_description {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	background: rgba(0,0,0,0.7);
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	opacity: 0;
+	-o-transition: all 0.2s linear 0s;
+	-moz-transition: all 0.2s linear 0s;
+	-webkit-transition: all 0.2s linear 0s;
+	-ms-transition: all 0.2s linear 0s;
+	transition: all 0.2s linear 0s;
+}
+.portfolio_example .portfolio_description h4 {
+	font-size: 21px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	border-bottom: 1px solid white;
+	padding-bottom: 20px;
+	margin-top: 20px;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	transform: scale(0.25);
+	-o-transition: all 0.3s linear 0s;
+	-moz-transition: all 0.3s linear 0s;
+	-webkit-transition: all 0.3s linear 0s;
+	-ms-transition: all 0.3s linear 0s;
+	transition: all 0.3s linear 0s;
+}
+.portfolio_example .portfolio_description li {
+	margin: 15px 0px;
+	text-align: center;
+	padding: 0px 10px;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	transform: scale(0.25);
+	-o-transition: all 0.3s linear 0s;
+	-moz-transition: all 0.3s linear 0s;
+	-webkit-transition: all 0.3s linear 0s;
+	-ms-transition: all 0.3s linear 0s;
+	transition: all 0.3s linear 0s;
+}
+.portfolio_example .portfolio_description .btn {
+	display: inline-block;
+	margin: 0px auto 0px auto;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	transform: scale(0.25);
+	-o-transition: all 0.3s linear 0s;
+	-moz-transition: all 0.3s linear 0s;
+	-webkit-transition: all 0.3s linear 0s;
+	-ms-transition: all 0.3s linear 0s;
+	transition: all 0.3s linear 0s;
+	}
+.portfolio_example:hover .portfolio_description {
+	opacity: 1;
+}
+.portfolio_example:hover .portfolio_description h4,
+.portfolio_example:hover .portfolio_description li,
+.portfolio_example:hover .portfolio_description a.btn {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
 }
 
+.link-cover{
+	text-align: center;
+}
+/*			BEGIN PORTFOLIO hover-effect-3d 			*/
+.hover-effect-3d{
+	position: relative;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 17px;
+	line-height: 44px;
+}
+.hover-effect-3d:hover,
+.hover-effect-3d:focus {
+	outline: none;
+}
+
+.hover-effect-3d span {
+	position: relative;
+	display: inline-block;
+	padding: 0 14px;
+	background: #3a7720;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+.csstransforms3d .hover-effect-3d span::before {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #2d5a1a;
+	content: attr(data-hover);
+	-webkit-transition: background 0.3s;
+	-moz-transition: background 0.3s;
+	transition: background 0.3s;
+	-webkit-transform: rotateX(-90deg);
+	-moz-transform: rotateX(-90deg);
+	transform: rotateX(-90deg);
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+}
+.hover-effect-3d:hover span,
+.hover-effect-3d:focus span {
+	-webkit-transform: rotateX(90deg) translateY(-22px);
+	-moz-transform: rotateX(90deg) translateY(-22px);
+	transform: rotateX(90deg) translateY(-22px);
+}
+.csstransforms3d .hover-effect-3d:hover span::before,
+.csstransforms3d .hover-effect-3d:focus span::before {
+	background: #2d5a1a;
+}
+/*		END PORTFOLIO hover-effect-3d 		*/
+
 /*			END PORTFOLIO 			*/
+
+/*			 BEGIN CONTACTS 			*/
+
+.contacts_description{
+	position: relative;
+}
+.contacts_info{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #fff;
+	width: 35%;
+	height: 100%;
+	text-align: center;
+}
+.map{
+	overflow: hidden;
+}
+/*			END CONTACTS 			*/
+
+/*			 BEGIN GO UP 			*/
+
+.go-up {
+  display: none;
+  width: 50px;
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  text-align: center;
+}
+.go-in {
+  display: none;
+  width: 50px;
+  position: fixed;
+  bottom: 20px;
+  left: 10px;
+  text-align: center;
+  transform: rotate(180deg);
+}
+
+/* 			End GO UP 			*/
+
+.download{
+	text-align: center;
+}
+.download a{
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	color: #fff;
+	background: green;
+	padding: 10px 20px;
+}
+
+
+/* 			BEGIN FOOTER 			*/
+
+footer{
+	min-height: 45px;
+	overflow: hidden;
+	background: green;
+}
+
+/* 			END FOOTER 			*/
 
 
 	background: -moz-linear-gradient(top, #ffffff 0%, #dadcdd 47%, #ffffff 100%);

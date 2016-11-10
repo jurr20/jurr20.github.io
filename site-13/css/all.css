@@ -1,0 +1,209 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+* {
+	outline: none;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+body {
+	font: 14px/1.2 "Trebuchet MS";
+	min-width: 320px; /*только min-width и никаких других ширин!*/
+}
+
+.container {
+	max-width: 1024px;
+	border-left: 1px solid;
+	border-right: 1px solid;
+	margin: 0 auto;
+}
+.container:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.header {
+	background: #373c3f;
+	position: relative;
+}
+.main-menu{
+	display: table;
+	width: 50%;
+	float: left;
+}
+.active-menu{
+	float: left;
+}
+.active-menu a{
+	display: inline-block;
+	text-align: center;
+	padding: 20px;
+	cursor: text;
+}
+.active-menu a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+}
+.main-menu li{
+	display: table-cell;
+	text-align: center;
+}
+.main-menu a{
+	display: inline-block;
+	padding: 20px 0;
+	cursor: pointer;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+}
+.main-menu li:hover{
+	background: #595E61;
+}
+
+.mobile-btn {
+	border: 0;
+	width: 45px;
+	display: none;
+	position: relative;
+	float: right;
+	z-index: 10;
+	padding: 11px;
+	cursor: pointer;
+	background: #000000;
+	line-height: inherit;
+}
+.mobile-btn .icons {
+	cursor: pointer;
+	display: inline-block;
+	font-size: 10px;
+	height: 16px;
+	width: 20px;
+	position: relative;
+}
+.mobile-btn .ico_bar {
+	background: #ffffff;
+	height: 3px;
+	width: 100%;
+	position: absolute;
+	-webkit-transition: .1s ease-in-out;
+	-moz-transition: .1s ease-in-out;
+	-o-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+	left: 0;
+}
+.mobile-btn.active_btn .ico_bar {
+	background: #fff;
+}
+.mobile-btn .ico_bar:first-child {
+	top: 0;
+}
+.mobile-btn .ico_bar:nth-child(2) {
+	top: 8px;
+}
+.mobile-btn .ico_bar:nth-child(3) {
+	top: 16px;
+}
+
+.mobile-btn.active_btn .ico_bar:first-child {
+	-webkit-transform: rotate(45deg)translate(5px,9px);
+	-moz-transform: rotate(45deg)translate(5px,9px);
+	-ms-transform: rotate(45deg)translate(5px,9px);
+	-o-transform: rotate(45deg)translate(5px,9px);
+	transform: rotate(45deg)translate(5px,9px);
+}
+.mobile-btn.active_btn .ico_bar:nth-child(3) {
+	-webkit-transform: rotate(-45deg)translate(2px,-6px);
+	-moz-transform: rotate(-45deg)translate(2px,-6px);
+	-ms-transform: rotate(-45deg)translate(2px,-6px);
+	-o-transform: rotate(-45deg)translate(2px,-6px);
+	transform: rotate(-45deg)translate(2px,-6px);
+}
+.mobile-btn.active_btn .ico_bar:nth-child(2) {
+	opacity: 0;
+}
+
+/*media*/
+
+@media screen and (max-width: 640px) {
+	.active-menu a{
+		padding: 13px;
+	}
+	.mobile-btn {
+		display: block;
+	}
+	.block-main-menu .active{
+		display: block;
+	}
+	.main-menu{
+		display: none;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 100%;
+		z-index: 9999;
+		text-align: center;
+		padding: 5px 0;
+		margin: 0;
+		background: #333;
+	}
+	.main-menu.open {
+		display: block;
+	}
+	.main-menu li {
+		display: block;
+	}
+	.main-menu a{
+		padding: 13px;
+	}
+}
+@media screen and (max-width: 320px) {
+	.active-menu a, 
+	.main-menu a{
+		font-size: 12px;
+	}
+	.main-menu a{
+		padding: 10px;
+	}
+}
