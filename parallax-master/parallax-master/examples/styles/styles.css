@@ -1,0 +1,119 @@
+
+.fill{
+  max-width: 600px;
+}
+button {
+  border: 10px solid #00FFAA;
+  overflow: hidden;
+  font-family: monospace;
+  position: absolute;
+  line-height: 60px;
+  text-align: left;
+  padding: 0 1.2em;
+  background: #444;
+  font-size: 24px;
+  cursor: pointer;
+  display: block;
+  outline: none;
+  height: 80px;
+  width: 80%;
+  top: 260px;
+  margin: 0;
+  left: 10%;
+
+}
+.layer:nth-child(5) button span,
+.layer:nth-child(4) button span,
+.layer:nth-child(3) button span,
+.layer:nth-child(2) button span,
+.layer:nth-child(1) button span{
+	-webkit-transform: rotate(90deg);
+	transform: rotate(-90deg);
+	width: 25px;
+	height: 45px;
+	line-height: 29px;
+	display: inline-block;
+	word-wrap: break-word;
+}
+
+button:hover {
+  background: #00FFAA;
+}
+.skills .container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.scene {
+  padding: 0;
+  margin: 0;
+}
+
+.fill {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  left: 5%;
+  top: 5%;
+}
+
+.expand-width {
+  width: 100%;
+}
+
+
+.aspect {
+  opacity: 0.2;
+}
+
+.layer:nth-child(1) {
+  opacity: 0.15;
+}
+.layer:nth-child(1) button {
+  -webkit-transform: rotate(150deg);
+}
+
+.layer:nth-child(2) {
+  opacity: 0.30;
+}
+.layer:nth-child(2) button {
+  -webkit-transform: rotate(120deg);
+}
+
+.layer:nth-child(3) {
+  opacity: 0.45;
+}
+.layer:nth-child(3) button {
+  -webkit-transform: rotate(90deg);
+}
+
+.layer:nth-child(4) {
+  opacity: 0.60;
+}
+.layer:nth-child(4) button {
+  -webkit-transform: rotate(60deg);
+}
+
+.layer:nth-child(5) {
+  opacity: 0.75;
+}
+.layer:nth-child(5) button {
+  -webkit-transform: rotate(30deg);
+}
+
+.layer:nth-child(6) {
+  opacity: 0.90;
+}
+.layer:nth-child(6) button {
+	text-align: center;
+	font-size: 17px;
+}
+.layer{
+	transition: .5s;
+}
+.layer:hover{
+	opacity: 0.9;
+	z-index: 1;
+}

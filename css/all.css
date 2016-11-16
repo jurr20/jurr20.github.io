@@ -1,4 +1,7 @@
 
+
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,10 +52,6 @@ img {
 	height: auto;
 }
 
-
-
-
-
 body {
 	font: 17px/1.2 'Conv_inglobal';
 }
@@ -80,9 +79,13 @@ body {
 header{
 	height: 100vh;
 	background: url(../images/keyboard.jpg) no-repeat;
+	-webkit-filter: invert(168%) hue-rotate(90deg);
+	-ms-filter: invert(168%) hue-rotate(90deg);
+	-o-filter: invert(168%) hue-rotate(90deg);
 	filter: invert(168%) hue-rotate(90deg);
 	padding-top: 30px;
 	margin-bottom: 40px;
+	position: relative;
 }
 .main-menu{
 	margin-bottom: 50px;
@@ -91,6 +94,10 @@ header{
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
+	-webkit-transform: rotate(angle);
+	-ms-transform: rotate(angle);
+	-o-transform: rotate(angle);
+	transform: rotate(angle);
 }
 .main-menu a{
 	text-transform: uppercase;
@@ -198,6 +205,17 @@ header{
 	opacity: 0;
 }
 
+.parallax_header{
+	position: relative;
+	overflow: hidden;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.parallax_info{
+	position: absolute;
+	top: 40%;
+	left: 8%;
+}
 /*media*/
 
 @media screen and (max-width: 640px) {
@@ -256,13 +274,39 @@ header{
 
 /*			BEGIN PORTFOLIO 			*/
 
+.portfolio{
+	background: url(../images/port-back11.png) no-repeat;
+	position: relative;
+	padding: 70px 0;
+	overflow: hidden;
+}
+.portfolio:before,
+.portfolio:after{
+	content: '';
+	width: 105%;
+	height: 83px;
+	position: absolute;
+	left: 0;
+	transform: rotate(3.5deg);
+}
+.portfolio:before{
+	top: -39px;
+	transform: rotate(3.5deg);
+	background:#fff;
+}
+.portfolio:after{
+	bottom: -39px;
+	transform: rotate(-3.5deg);
+	background: #bbeec7;
+}
 .portfolio_example{
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
-	width: 32%;
+	width: 33%;
 	position: relative;
 	overflow: hidden;
+	padding:7px;
 }
 .portfolio_example{
 	position: relative;
@@ -403,9 +447,150 @@ header{
 	background: #2d5a1a;
 }
 /*		END PORTFOLIO hover-effect-3d 		*/
-
 /*			END PORTFOLIO 			*/
 
+/*			 BEGIN SKILLS 			*/
+
+
+.skills{
+	min-height: 700px;
+	background: #bbeec7;
+}
+.container-fill{
+	position: relative;
+	max-width: 600px;
+	margin: 0 auto;
+}
+button {
+  border: 10px solid #312e2e;
+  background: #fff;
+  overflow: hidden;
+  font-family: monospace;
+  position: absolute;
+  text-align: left;
+  padding: 0 1.2em;
+  font-size: 24px;
+  cursor: pointer;
+  display: block;
+  outline: none;
+  height: 80px;
+  width: 90%;
+  top: 260px;
+  margin: 0;
+  left: 5%;
+}
+
+
+.layer:nth-child(5) button span,
+.layer:nth-child(4) button span,
+.layer:nth-child(3) button span,
+.layer:nth-child(2) button span,
+.layer:nth-child(1) button span{
+	-webkit-transform: rotate(90deg);
+	transform: rotate(-90deg);
+	width: 25px;
+	height: 45px;
+	line-height: 21px;
+	display: inline-block;
+	word-wrap: break-word;
+}
+
+button:hover {
+  background: #312e2e;
+  color: #f1f1f1;
+}
+.scene {
+  padding: 0;
+  margin: 0;
+}
+
+.fill {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;
+}
+
+.expand-width {
+  width: 100%;
+}
+.layer:nth-child(1) {
+  opacity: 0.25;
+}
+.layer:nth-child(1) button {
+  -webkit-transform: rotate(150deg);
+}
+.layer:nth-child(2) {
+  opacity: 0.38;
+}
+.layer:nth-child(2) button {
+  -webkit-transform: rotate(120deg);
+}
+.layer:nth-child(3) {
+  opacity: 0.51;
+}
+.layer:nth-child(3) button {
+  -webkit-transform: rotate(90deg);
+}
+
+.layer:nth-child(4) {
+  opacity: 0.64;
+}
+.layer:nth-child(4) button {
+  -webkit-transform: rotate(60deg);
+}
+
+.layer:nth-child(5) {
+  opacity: 0.77;
+}
+.layer:nth-child(5) button {
+  -webkit-transform: rotate(30deg);
+}
+
+.layer:nth-child(6) {
+  opacity: 0.90;
+}
+.layer:nth-child(6) button {
+	text-align: center;
+	font-size: 20px;
+}
+.layer{
+	transition: .5s;
+}
+.layer:hover{
+	opacity: 0.9;
+	z-index: 1;
+}
+
+
+/*			END SKILLS 			*/
+/*			 BEGIN BG_EFFECT 			*/
+.bg-effect{
+	height: 75px;
+	position: relative;
+	overflow: hidden;
+	top: -30px;
+}
+.bg-effect:before,
+.bg-effect:after{
+	content: '';
+	width: 930px;
+	height: 65px;
+	position: absolute;
+	top: -28px;
+}
+.bg-effect:before{
+	left: 0px;
+	transform: rotate(4.5deg);
+	background: #bbeec7;
+}
+.bg-effect:after{
+	right: -5px;
+	transform: rotate(-4.5deg);
+	background: #bbeec7;
+}
+/*			 END BG_EFFECT 			*/
 /*			 BEGIN CONTACTS 			*/
 
 .contacts_description{
@@ -449,14 +634,39 @@ header{
 
 .download{
 	text-align: center;
+	margin-bottom: 15px;
 }
 .download a{
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
 	color: #fff;
-	background: green;
 	padding: 10px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	animation: b 1.5s ease-in-out infinite;
+	background: #45c1a0;
+	padding: 10px;
+}
+@keyframes b {
+  0% {
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  50% {
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
 }
 
 
@@ -465,10 +675,12 @@ header{
 footer{
 	min-height: 45px;
 	overflow: hidden;
-	background: green;
+	background: #45c1a0;
 }
 
 /* 			END FOOTER 			*/
+
+
 
 
 	background: -moz-linear-gradient(top, #ffffff 0%, #dadcdd 47%, #ffffff 100%);

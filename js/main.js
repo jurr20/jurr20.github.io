@@ -62,5 +62,16 @@ $('.js-go-in').on("click", function() {
 //end go up
 
 
+
+$(window).scroll(function(){
+
+	var st=$(this).scrollTop();
+// ПАРАЛАКС ТЕКСТА
+	$(".parallax_info").css({
+		"transform":"translate(0%, "+st/3 +"%"
+	});
+
+});
+
 });
 
