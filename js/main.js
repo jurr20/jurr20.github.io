@@ -44,34 +44,17 @@ $('.js-go-up').on("click", function() {
 });
 //end go up
 
-//start go up
-$(window).scroll(function() {
-	if ($(this).scrollTop() > 0) {
-		$('.js-go-in').fadeIn();
-	} else {
-		$('.js-go-in').fadeOut();
-	}
-});
 
-$('.js-go-in').on("click", function() {
-	$('body,html').animate({
-		scrollTop: 3000
-	}, 1500);
-	return true;
-});
-//end go up
-
-
-
+// start parallax_header
 $(window).scroll(function(){
 
 	var st=$(this).scrollTop();
-// ПАРАЛАКС ТЕКСТА
 	$(".parallax_info").css({
 		"transform":"translate(0%, "+st/3 +"%"
 	});
 
 });
+// end parallax_header
 
 });
 
