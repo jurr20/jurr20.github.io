@@ -111,11 +111,23 @@ nav a:focus {
 
 body {
 	font: 17px/1.2 'Conv_inglobal';
+	min-width: 270px;
+	-webkit-text-size-adjust: none;
+	ms-text-size-adjust: none;
+}
+.wrapper{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
 }
 .container {
-	margin: 0 auto;
-	min-width: 260px;
-	padding: 0 30px;
+	max-width: 1000px;
+	    margin: 0 auto;
+	    padding: 0 1%;
+	    box-sizing: border-box;
+	/*margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 30px;*/
 }
 .container:after {
 	content: "";
@@ -132,11 +144,6 @@ body {
 	margin: 0 auto 45px auto;
 }
 
-@media screen and (max-width: 400px) {
-	.container{
-		padding: 0 10px;
-	}
-}
 @media screen and (max-width: 500px) {
 	.title {
 		font-size: 22px;
@@ -145,24 +152,9 @@ body {
 		font-size: 15px;
 	}
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
 	.line-icon{
 		margin: 0 auto 20px auto;
-	}
-}
-@media screen and (min-width: 1200px) {
-	.container{
-		padding: 0 40px;
-	}
-}
-@media screen and (min-width: 1400px) {
-	.container{
-		padding: 0 50px;
-	}
-}
-@media screen and (min-width: 1600px) {
-	.container{
-		padding: 0 5%;
 	}
 }
 
