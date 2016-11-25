@@ -581,7 +581,7 @@ header{
 /*			BEGIN PORTFOLIO 			*/
 
 .portfolio{
-	background: url(../images/bg-city.png) no-repeat;
+	background: url(../images/bg-city.jpg);
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-ms-background-size: cover;
