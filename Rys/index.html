@@ -8,17 +8,22 @@
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/bootstrap-grid-3.3.1.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
-	<script src="js/owl.carousel.js"></script>
-	<script src="js/main.js"></script>
+	<link rel="stylesheet" href="css/select2.css">
+	<script src="js/1.11.3-jquery.min.js" type="text/javascript"></script>
+	<script src="js/1.12.1-jquery-ui.js" type="text/javascript"></script>
+	<script src="js/owl.carousel.js" type="text/javascript"></script>
+	<script src="js/main.js"  type="text/javascript"></script>
+	<script src="js/select2.min.js"  type="text/javascript"></script>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 </head>
 <body>
-	<div class="holder-iframe">
-		<iframe class="taxymeter" width="100%" height="700" frameborder="0" src="https://taximeter.yandex.rostaxi.org/request/form/1ed0e5473fcd14de5b17a73aea43e049"></iframe>
+	<div class="modal-iframe">
+		<div class="holder-iframe">
+			<iframe class="taxymeter" width="100%" height="100%" frameborder="0" src="https://taximeter.yandex.rostaxi.org/request/form/1ed0e5473fcd14de5b17a73aea43e049"></iframe>
+			<img src="images/close-icon.png" class="close-icon" alt="">
+		</div>
 		<div class="overlay-iframe"></div>
-		<img src="images/close-icon.png" class="close-icon" alt="">
 	</div>
 	<div class="wrapper">
 		<div class="header" id="home">
@@ -667,7 +672,13 @@
 			<!--  BEGIN BLOCK-REVIEWS -->
 			<div id="reviews" class="carousel-reviews">
 				<div class="container">
-					<div class="title">Отзывы</div>
+					<div class="title">
+						Отзывы 
+						<a href="" class="button-add-reviews no-body-scrollbar">
+							<i class="fa fa-comment-o"></i>
+							<span class="ng-binding">оставить отзыв</span>
+						</a>
+					</div>
 					<div class="owl-carousel" id='carousel-reviews'>
 
 						<div class="item clearfix">
@@ -745,17 +756,18 @@
 				
 					<!-- <a href="">Оставить жалобу</a> -->
 				</div>
-				<div class="col-md-3 col-sm-6 social-buttons">
+				<div class="col-md-2 col-sm-6 social-buttons">
 					<ul class="row">
-						<!-- <li class="facebook"><a href="" class="fa fa-facebook" target="_blank"></a></li> -->
 						<li class="vk"><a href="https://vk.com/taxi_rys" class="fa fa-vk" target="_blank"></a></li>
+						<li class="odnoklassniki"><a href="" class="fa fa-odnoklassniki"></a></li>
+						<!-- <li class="facebook"><a href="" class="fa fa-facebook" target="_blank"></a></li> -->
 						<!-- <li class="twitter"><a href="" class="fa fa-ok" target="_blank"></a></li> -->
 						<!-- <li class="instagram"><a href="" class="fa fa-instagram" target="_blank"></a></li> -->
 						<!-- <li class="youtube"><a href="" class="fa fa-youtube" target="_blank"></a></li> -->
 					</ul>
 				</div>
 
-				<div class="col-md-5 col-sm-6 menu-copyright">
+				<div class="col-md-6 col-sm-6 menu-copyright">
 					<div class="col-md-12 row">
 						<ul class="col-md-6 col-sm-6">
 							<!-- <li><a scroll-animate="" href="">Трансфер аэропорт</a></li> -->
@@ -780,6 +792,30 @@
 				</div> -->
 			</div>
 		</div>
+
+<div class="holder-modal-reviews">
+	<div class="questions-overlay"></div>
+	<div class="modal-questions">
+		<div class="modal-question-title"><i class="fa fa-times close-modal-questions" aria-hidden="true"></i><span>Оставить отзыв / жалобу</span></div>
+		<form name="reviews-form" class="reviews-form">
+				<div class="row-form">
+					<label for="name">Имя</label>
+					<input type="text" placeholder="Имя" name="name" required="" pattern="^[\S]+$" id="name">
+				</div>
+
+				<div class="row-form">
+					<label for="contact">Email или телефон</label>
+					<input type="text" id="contact" placeholder="Email или телефон" name="contact" required="" pattern="^([A-Za-z0-9_][A-Za-z0-9_\.\-]+@[A-Za-z0-9_\-]{2,}\.[A-Za-z0-9_\-]{2,}|\+?[0-9]{7,})$">
+				</div>
+
+			<div class="row-form">
+				<label for="text">Сообщение</label>
+				<textarea id="text" placeholder="Текст сообщения" name="text" rows="7" required=""></textarea>
+			</div>
+			<button type="submit">Отправить</button>
+		</form>
+	</div>
+</div>
 
 <div class="holder-modal-questions ">
 	<div class="questions-overlay"></div>
@@ -906,6 +942,7 @@
 		</ul>
 	</div>
 </div>
+
 <div class="holder-modal-contacts">
 	<div class="questions-overlay"></div>
 	<div class="modal-questions">
@@ -939,6 +976,7 @@
 		</address>
 	</div>
 </div>
+
 <div class="holder-modal-car">
 	<div class="questions-overlay"></div>
 	<div class="modal-questions">

@@ -66,17 +66,30 @@ $(document).ready(function() {
 	// BEGIN открытие фрейма
 	$(".header-button").click(function(e) {
 		e.preventDefault();
-		$(".holder-iframe").toggleClass('show-iframe');
+		$(".modal-iframe").toggleClass('show-iframe');
 	})
 
 	$(".header-line").click(function(e) {
-		$(".holder-iframe").removeClass('show-iframe');
+		$(".modal-iframe").removeClass('show-iframe');
 	})
 
 	$(".close-icon").click(function(e) {
 		e.preventDefault();
-		$(".holder-iframe").removeClass('show-iframe');
+		$(".modal-iframe").removeClass('show-iframe');
 	})
+
+	$(".overlay-iframe").click(function(e) {
+		e.preventDefault();
+		$(".modal-iframe").removeClass('show-iframe');
+	})
+
+	$( '.overlay-iframe' ).bind( 'mousewheel DOMMouseScroll', function ( e ) {
+	    var e0 = e.originalEvent,
+	        delta = e0.wheelDelta || -e0.detail;
+	    
+	    this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+	    e.preventDefault();
+	});
 
 
 	$('.carousel-benefits .owl-carousel').owlCarousel({
@@ -136,10 +149,30 @@ $(document).ready(function() {
 	});
 
 	$(".no-body-scrollbar").click(function(e) {
-		e.preventDefault();
 		$("body").addClass('scrollbar');
 	})
+	$(".questions-overlay").click(function(e) {
+		$("body").removeClass('scrollbar');
+	})
+	$(".close-modal-questions").click(function(e) {
+		$("body").removeClass('scrollbar');
+	})
 
+// reviews
+	$(".button-add-reviews").click(function(e) {
+		e.preventDefault();
+		$(".holder-modal-reviews").addClass('show-modal');
+	})
+
+	$(".close-modal-questions").click(function(e) {
+		e.preventDefault();
+		$(".holder-modal-reviews").removeClass('show-modal');
+	})
+
+	$(".questions-overlay").click(function(e) {
+		e.preventDefault();
+		$(".holder-modal-reviews").removeClass('show-modal');
+	})
 // questions
 	$(".link-questions").click(function(e) {
 		e.preventDefault();
