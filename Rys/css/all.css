@@ -2388,9 +2388,7 @@ body {
 }
 @media screen and (max-width:350px){
   .holder-iframe{
-    min-height: 400px;
-    min-width: 490px;
-    overflow: hidden;
+    width: 100%;
    }
 }
 .taxymeter{
@@ -2459,8 +2457,8 @@ width:10px;
 height:0px
 }
 .holder-iframe::-webkit-scrollbar{
-width: 7px;
-height: 7px;
+width:10px;
+height: 10px;
 }
 
 

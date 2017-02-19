@@ -83,13 +83,22 @@ $(document).ready(function() {
 		$(".modal-iframe").removeClass('show-iframe');
 	})
 
-	$( '.overlay-iframe' ).bind( 'mousewheel DOMMouseScroll', function ( e ) {
+	$( '.modal-iframe' ).bind( 'mousewheel DOMMouseScroll', function ( e ) {
 	    var e0 = e.originalEvent,
 	        delta = e0.wheelDelta || -e0.detail;
 	    
 	    this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
 	    e.preventDefault();
 	});
+	
+	$( '.modal-questions' ).bind( 'mousewheel DOMMouseScroll', function ( e ) {
+	    var e0 = e.originalEvent,
+	        delta = e0.wheelDelta || -e0.detail;
+	    
+	    this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+	    e.preventDefault();
+	});
+
 
 
 	$('.carousel-benefits .owl-carousel').owlCarousel({
