@@ -2386,6 +2386,13 @@ body {
     width: 95%;
   }
 }
+@media screen and (max-width:350px){
+  .holder-iframe{
+    min-height: 400px;
+    min-width: 490px;
+    overflow: hidden;
+   }
+}
 .taxymeter{
   position: absolute;
   top: 0;
