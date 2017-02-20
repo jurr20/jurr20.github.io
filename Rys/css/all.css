@@ -2348,11 +2348,12 @@ body {
 }
 @media screen and (max-width:650px){
   .modal-iframe.show-iframe{
-    overflow:-webkit-overlay;
+/*    overflow:-webkit-overlay;
     overflow:-moz-overlay;
     overflow:-ms-overlay;
     overflow:-o-overlay;
-    overflow: overlay;
+    overflow: overlay;*/
+    width: 600px
   }
 }
 .holder-iframe{
