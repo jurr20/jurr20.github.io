@@ -90,13 +90,21 @@ $(document).ready(function() {
 	    this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
 	    e.preventDefault();
 	});
-	
-	$( '.modal-questions' ).bind( 'mousewheel DOMMouseScroll', function ( e ) {
+
+	$( '.overlay-iframe' ).bind( 'mousewheel DOMMouseScroll', function ( e ) {
 	    var e0 = e.originalEvent,
 	        delta = e0.wheelDelta || -e0.detail;
 	    
 	    this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
 	    e.preventDefault();
+	});
+
+	$(".close-icon").click(function(e) {
+		$("body").removeClass('scrollbar');
+	});
+
+	$(".overlay-iframe").click(function(e) {
+		$("body").removeClass('scrollbar');
 	});
 
 

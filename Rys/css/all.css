@@ -2346,6 +2346,15 @@ body {
   left: 0;
   top:0;
 }
+@media screen and (max-width:650px){
+  .modal-iframe.show-iframe{
+    overflow:-webkit-overlay;
+    overflow:-moz-overlay;
+    overflow:-ms-overlay;
+    overflow:-o-overlay;
+    overflow: overlay;
+  }
+}
 .holder-iframe{
   position: absolute;
   top: 80px;
@@ -2369,7 +2378,7 @@ body {
     top:10%;
     height: 80%;
     width: 75%;
-    overflow: scroll;
+    overflow: auto;
   }
 }
 @media screen and (max-width:768px){
@@ -2381,15 +2390,23 @@ body {
 }
 @media screen and (max-width:650px){
   .holder-iframe{
-    top:10%;
-    height: 80%;
-    width: 95%;
+    top:40px;
+    left:20px;
+    -webkit-transform: touch-action: pan-y pan-x;
+    -moz-transform: touch-action: pan-y pan-x;
+    -ms-transform:touch-action: pan-y pan-x;
+    -o-transform: touch-action: pan-y pan-x;
+    touch-action: pan-y pan-x;
+
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0)
+    transform:translate(0);
+    overflow: hidden;
+    height: 400px;
+    width: 535px;
   }
-}
-@media screen and (max-width:350px){
-  .holder-iframe{
-    width: 100%;
-   }
 }
 .taxymeter{
   position: absolute;
@@ -2410,6 +2427,12 @@ body {
   z-index: 1;
   position: relative;
   cursor: pointer;
+}
+@media screen and (max-width:650px){
+  .overlay-iframe{
+    min-width: 575px;
+    min-height: 530px;
+  }
 }
 .close-icon{
   display: none;
@@ -2433,32 +2456,32 @@ body {
   display: block;
 }
 
-.holder-iframe::-webkit-scrollbar-button {
+.modal-iframe::-webkit-scrollbar-button {
 background-image:url('');
 background-repeat:no-repeat;
 width:0px;
 height:0px;
 }
-.holder-iframe::-webkit-scrollbar-track {
+.modal-iframe::-webkit-scrollbar-track {
 background-color:#ecedee;
 }
-.holder-iframe::-webkit-scrollbar-thumb {
+.modal-iframe::-webkit-scrollbar-thumb {
 -webkit-border-radius: 0px;
 border-radius: 0px;
 background-color:rgb(196, 151, 29);
 }
-.holder-iframe::-webkit-scrollbar-thumb:hover{
+.modal-iframe::-webkit-scrollbar-thumb:hover{
 background-color:rgb(181, 138, 23);
 }
-.holder-iframe::-webkit-resizer{
+.modal-iframe::-webkit-resizer{
 background-image:url('');
 background-repeat:no-repeat;
 width:10px;
 height:0px
 }
-.holder-iframe::-webkit-scrollbar{
-width:10px;
-height: 10px;
+.modal-iframe::-webkit-scrollbar{
+width:13px;
+height: 13px;
 }
 
 
