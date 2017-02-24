@@ -483,19 +483,54 @@ header{
 	padding: 14px 20px;
 	text-decoration: none;
 	text-transform: uppercase;
+	position: relative;
+}
+.download a:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	background: #bbeec7;
+	z-index: -1;
 	-webkit-animation: b 2s ease-in-out infinite;
 	-moz-animation: b 2s ease-in-out infinite;
 	-ms-animation: b 2s ease-in-out infinite;
 	-o-animation: b 2s ease-in-out infinite;
 	animation: b 2s ease-in-out infinite;
 }
-.download a:hover {
+.download a:hover:after{
 	-webkit-animation: none;
 	-moz-animation:none;
 	-ms-animation: none;
 	-o-animation: none;
 	animation: none;
+}
+.download a:hover:before{
+	-webkit-animation: none;
+	-moz-animation:none;
+	-ms-animation: none;
+	-o-animation: none;
+	animation: none;
+	opacity:0;
+}
+.download a:before{
+  content: '';
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 1px;
+  box-shadow: 3px 5px 0px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease-in-out;
+  -webkit-animation: a 2s ease-in-out infinite;
+  -moz-animation: a 2s ease-in-out infinite;
+  -ms-animation: a 2s ease-in-out infinite;
+  -o-animation: a 2s ease-in-out infinite;
+  animation: a 2s ease-in-out infinite;
 }
 @keyframes b {
   0% {
@@ -506,12 +541,11 @@ header{
     transform: scale(1, 1);
   }
   50% {
-    -moz-transform: scale(1.05, 1.05);
-    -ms-transform: scale(1.05, 1.05);
-    -webkit-transform: scale(1.05, 1.05);
-    -o-transform: scale(1.05, 1.05);
-    transform: scale(1.05, 1.05);
-    font-weight: bold;
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
   }
   100% {
     -moz-transform: scale(1, 1);
@@ -519,6 +553,32 @@ header{
     -webkit-transform: scale(1, 1);
     -o-transform: scale(1, 1);
     transform: scale(1, 1);
+  }
+}
+@keyframes a {
+  0% {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity:0;
+  }
+  50% {
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    opacity:1;
+  }
+  100% {
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity:0;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -1431,3 +1491,32 @@ footer{
 
 /* 			END FOOTER 			*/
 
+body::-webkit-scrollbar-button {
+background-image:url('');
+background-repeat:no-repeat;
+width:0px;
+height:0px;
+}
+body::-webkit-scrollbar-track {
+background-color:#baedc6;
+border:1px solid #afdab0;
+} 
+body::-webkit-scrollbar-thumb {
+-webkit-border-radius: 0px;
+border-radius: 6px;
+background-color:#f5fff8;
+border:1px solid #afdab0;
+}
+body::-webkit-scrollbar-thumb:hover{
+background-color:#f5fff8;
+}
+body::-webkit-resizer{
+background-image:url('');
+background-repeat:no-repeat;
+width:10px;
+height:0px
+}
+body::-webkit-scrollbar{
+width:13px;
+height: 13px;
+}
